@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotorWeb - Garagem de Carros Usados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .car-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car text-blue-500 text-3xl mr-2"></i>
+                <h1 class="text-2xl font-bold text-gray-800">Motor<span class="text-blue-500">Web</span></h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-blue-500 font-medium">Início</a>
+                <a href="#veiculos" class="text-gray-600 hover:text-blue-500 transition">Veículos</a>
+                <a href="#servicos" class="text-gray-600 hover:text-blue-500 transition">Serviços</a>
+                <a href="#sobre" class="text-gray-600 hover:text-blue-500 transition">Sobre Nós</a>
+                <a href="/contato" class="text-gray-600 hover:text-blue-500 transition">Contato</a>
+            </nav>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Encontre o carro dos seus sonhos</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Na MotorWeb, oferecemos os melhores carros usados com garantia e qualidade comprovada.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#veiculos" class="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition duration-300">Ver Carros</a>
+                <a href="contato.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white px-8 py-3 rounded-lg font-medium transition duration-300">Fale Conosco</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Por que escolher a MotorWeb?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition duration-300">
+                    <div class="feature-icon text-blue-500 text-5xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Garantia de 12 meses</h3>
+                    <p class="text-gray-600">Todos os nossos veículos passam por rigorosa inspeção e vêm com garantia para sua tranquilidade.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition duration-300">
+                    <div class="feature-icon text-blue-500 text-5xl mb-4">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Transparência Total</h3>
+                    <p class="text-gray-600">Relatórios completos de histórico e condições reais de cada veículo, sem surpresas.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition duration-300">
+                    <div class="feature-icon text-blue-500 text-5xl mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Financiamento Facilitado</h3>
+                    <p class="text-gray-600">Parcerias com diversas instituições financeiras para oferecer as melhores condições de pagamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicles Section -->
+    <section id="veiculos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Veículos em Destaque</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Vehicle 1 -->
+                <div class="car-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Ford Mustang" class="w-full h-56 object-cover">
+                        <span class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Novo</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Ford Mustang GT 2021</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-yellow-400 mr-1"><i class="fas fa-star"></i></span>
+                            <span class="text-gray-600">4.8 (36 avaliações)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600 block">Quilometragem</span>
+                                <span class="font-medium">18.500 km</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600 block">Combustível</span>
+                                <span class="font-medium">Gasolina</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600 block">Câmbio</span>
+                                <span class="font-medium">Automático</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+                            <span class="text-2xl font-bold text-blue-500">R$ 289.900</span>
+                            <a href="contato.html" class="text-blue-500 hover:text-blue-600 font-medium flex items-center">
+                                Detalhes <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 2 -->
+                <div class="car-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Volkswagen Golf" class="w-full h-56 object-cover">
+                        <span class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">Semi-novo</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Volkswagen Golf 1.4 TSI</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-yellow-400 mr-1"><i class="fas fa-star"></i></span>
+                            <span class="text-gray-600">4.6 (28 avaliações)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600 block">Quilometragem</span>
+                                <span class="font-medium">32.700 km</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600 block">Combustível</span>
+                                <span class="font-medium">Flex</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600 block">Câmbio</span>
+                                <span class="font-medium">Automático</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+                            <span class="text-2xl font-bold text-blue-500">R$ 129.900</span>
+                            <a href="contato.html" class="text-blue-500 hover:text-blue-600 font-medium flex items-center">
+                                Detalhes <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vehicle 3 -->
+                <div class="car-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Jeep Renegade" class="w-full h-56 object-cover">
+                        <span class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">Oferta</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Jeep Renegade Longitude</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-yellow-400 mr-1"><i class="fas fa-star"></i></span>
+                            <span class="text-gray-600">4.5 (42 avaliações)</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-600 block">Quilometragem</span>
+                                <span class="font-medium">45.200 km</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600 block">Combustível</span>
+                                <span class="font-medium">Flex</span>
+                            </div>
+                            <div>
+                                <span class="text-gray-600 block">Câmbio</span>
+                                <span class="font-medium">Automático</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-4 border-t border-gray-200">
+                            <span class="text-2xl font-bold text-blue-500">R$ 99.900</span>
+                            <a href="contato.html" class="text-blue-500 hover:text-blue-600 font-medium flex items-center">
+                                Detalhes <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <a href="contato.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-lg font-medium transition duration-300">Ver Todos os Veículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nossos Serviços</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl flex items-start">
+                    <div class="bg-blue-100 p-4 rounded-full mr-6">
+                        <i class="fas fa-exchange-alt text-blue-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Troca Facilitada</h3>
+                        <p class="text-gray-600">Avaliamos seu veículo atual e oferecemos condições especiais para troca por um de nossos carros.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl flex items-start">
+                    <div class="bg-blue-100 p-4 rounded-full mr-6">
+                        <i class="fas fa-tools text-blue-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Manutenção Especializada</h3>
+                        <p class="text-gray-600">Oficina própria com técnicos especializados para cuidar do seu veículo após a compra.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl flex items-start">
+                    <div class="bg-blue-100 p-4 rounded-full mr-6">
+                        <i class="fas fa-file-signature text-blue-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Documentação Completa</h3>
+                        <p class="text-gray-600">Cuidamos de toda a documentação necessária para transferência e licenciamento do veículo.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl flex items-start">
+                    <div class="bg-blue-100 p-4 rounded-full mr-6">
+                        <i class="fas fa-shuttle-van text-blue-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Test Drive em Casa</h3>
+                        <p class="text-gray-600">Levaremos o carro de sua escolha até sua residência para um test drive sem compromisso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1580274455191-1c2554fce62f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Sobre a MotorWeb" class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Sobre a MotorWeb</h2>
+                    <p class="text-gray-600 mb-4">Fundada em 2010, a MotorWeb se consolidou como uma das mais respeitadas revendedoras de veículos usados na região, com mais de 2.000 clientes satisfeitos.</p>
+                    <p class="text-gray-600 mb-6">Nossa missão é oferecer veículos de qualidade com transparência e atendimento personalizado, garantindo a melhor experiência de compra para nossos clientes.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-blue-500 text-3xl font-bold mb-2">12+</div>
+                            <div class="text-gray-600">Anos no mercado</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-blue-500 text-3xl font-bold mb-2">2K+</div>
+                            <div class="text-gray-600">Clientes satisfeitos</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-blue-500 text-3xl font-bold mb-2">98%</div>
+                            <div class="text-gray-600">Índice de satisfação</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="text-blue-500 text-3xl font-bold mb-2">50+</div>
+                            <div class="text-gray-600">Marcas disponíveis</div>
+                        </div>
+                    </div>
+                    <a href="contato.html" class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-medium transition duration-300">Conheça nossa equipe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">O que nossos clientes dizem</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Comprei meu Golf na MotorWeb e fiquei impressionado com a transparência no processo. O carro estava exatamente como descrito e a equipe foi super atenciosa."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Roberto Silva</h4>
+                            <p class="text-sm text-gray-500">Comprou um Volkswagen Golf</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Ótima experiência de compra! Consegui financiamento com taxas melhores que as do mercado e o carro veio com todos os detalhes revisados. Recomendo!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Ana Paula Oliveira</h4>
+                            <p class="text-sm text-gray-500">Comprou um Jeep Renegade</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Fiz a troca do meu carro antigo por um Mustang na MotorWeb. O processo foi rápido e sem burocracia. Estou muito satisfeito com meu novo carro!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-medium text-gray-800">Carlos Eduardo</h4>
+                            <p class="text-sm text-gray-500">Comprou um Ford Mustang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Pronto para encontrar seu carro ideal?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Entre em contato conosco agora mesmo e agende uma visita sem compromisso.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="contato.html" class="bg-white hover:bg-gray-100 text-blue-500 px-8 py-3 rounded-lg font-medium transition duration-300">Fale Conosco</a>
+                <a href="tel:+5511999999999" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-500 px-8 py-3 rounded-lg font-medium transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i> (11) 99999-9999
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-blue-400 text-2xl mr-2"></i>
+                        <h3 class="text-xl font-bold">Motor<span class="text-blue-400">Web</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">A melhor escolha para compra e venda de veículos usados com qualidade e garantia.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#veiculos" class="text-gray-400 hover:text-white transition">Veículos</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-white transition">Serviços</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+                        <li><a href="contato.html" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Horário de Funcionamento</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between"><span>Segunda - Sexta:</span> <span>9:00 - 18:00</span></li>
+                        <li class="flex justify-between"><span>Sábado:</span> <span>9:00 - 14:00</span></li>
+                        <li class="flex justify-between"><span>Domingo:</span> <span>Fechado</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                            <span>Av. Paulista, 1000 - São Paulo/SP</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-400"></i>
+                            <span>(11) 99999-9999</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                            <span>contato@motorweb.com.br</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 MotorWeb. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-500 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle (placeholder - would need more implementation)
+        document.querySelector('header button').addEventListener('click', () => {
+            alert('Menu mobile seria aberto aqui');
+        });
+    </script>
+</body>
+</html>
