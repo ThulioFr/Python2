@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - MotorWeb</title>
+    <title>Sobre Nós - MotorWeb</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -46,8 +46,8 @@
         <div id="mobile-menu" class="md:hidden hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="/" class="nav-link-mobile" data-page="index">Home</a>
-                <a href="/veiculos" class="nav-link-mobile" data-page="veiculos">Veículos</a>
-                <a href="/servicos" class="nav-link-mobile" data-page="servicos">Serviços</a>
+                <a href="/veiculo" class="nav-link-mobile" data-page="veiculos">Veículos</a>
+                <a href="/servico" class="nav-link-mobile" data-page="servicos">Serviços</a>
                 <a href="/sobre" class="nav-link-mobile" data-page="sobre">Sobre Nós</a>
                 <a href="/contato" class="nav-link-mobile" data-page="contato">Contato</a>
             </div>
@@ -58,60 +58,64 @@
         <section class="py-12 bg-gray-50">
             <div class="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h1>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Estamos prontos para atendê-lo. Envie sua mensagem ou visite-nos!</p>
+                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Sobre a MotorWeb</h1>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Conheça a nossa história, missão e os valores que nos movem a oferecer o melhor para você e seu veículo.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                    <div class="bg-white p-8 rounded-xl shadow-xl">
-                        <h2 class="text-2xl font-semibold text-amber-600 mb-6">Envie uma Mensagem</h2>
-                        <form id="contactForm" class="space-y-6">
-                            <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700">Nome Completo</label>
-                                <input type="text" name="name" id="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
-                                <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-700">Telefone (Opcional)</label>
-                                <input type="tel" name="phone" id="phone" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm">
-                            </div>
-                            <div>
-                                <label for="subject" class="block text-sm font-medium text-gray-700">Assunto</label>
-                                <input type="text" name="subject" id="subject" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm">
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
-                                <textarea name="message" id="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-amber-500 focus:border-amber-500 sm:text-sm"></textarea>
-                            </div>
-                            <div>
-                                <button type="submit" class="w-full btn-primary">
-                                    Enviar Mensagem
-                                </button>
-                            </div>
-                        </form>
-                        <div id="form-feedback" class="mt-4 text-sm"></div>
-                    </div>
-
-                    <div class="space-y-8">
-                        <div class="bg-white p-8 rounded-xl shadow-xl">
-                            <h2 class="text-2xl font-semibold text-amber-600 mb-6">Nossas Informações</h2>
-                            <div class="space-y-4 text-gray-700">
-                                <p><i class="fas fa-map-marker-alt fa-fw mr-3 text-amber-500"></i>Rua Exemplo, 123, Bairro Centro<br><span class="ml-7">Cidade Exemplo, UF - CEP 12345-678</span></p>
-                                <p><i class="fas fa-phone fa-fw mr-3 text-amber-500"></i>(XX) 1234-5678</p>
-                                <p><i class="fas fa-mobile-alt fa-fw mr-3 text-amber-500"></i>(XX) 91234-5678 (WhatsApp)</p>
-                                <p><i class="fas fa-envelope fa-fw mr-3 text-amber-500"></i>contato@motorweb.com.br</p>
-                                <p><i class="fas fa-clock fa-fw mr-3 text-amber-500"></i>Segunda a Sexta: 08:00 - 18:00<br><span class="ml-7">Sábado: 08:00 - 12:00</span></p>
-                            </div>
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl mb-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 class="text-3xl font-semibold text-amber-600 mb-4">Nossa História</h2>
+                            <p class="text-gray-700 leading-relaxed mb-4">
+                                Fundada em [Ano de Fundação], a MotorWeb nasceu da paixão por automóveis e do desejo de criar um espaço onde clientes pudessem encontrar não apenas veículos de qualidade, mas também serviços confiáveis e um atendimento diferenciado. Ao longo dos anos, crescemos e nos consolidamos como referência no mercado automotivo regional, sempre investindo em tecnologia, capacitação de nossa equipe e, principalmente, na satisfação de nossos clientes.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Cada etapa da nossa trajetória foi marcada pelo compromisso com a transparência e a excelência, construindo relações de confiança duradouras.
+                            </p>
                         </div>
-                        <div class="bg-white rounded-xl shadow-xl overflow-hidden">
-                             <h2 class="text-2xl font-semibold text-amber-600 p-8 pb-0">Localização</h2>
-                            <img src="https://placehold.co/600x400/e2e8f0/334155?text=Mapa+da+Localização+da+MotorWeb" alt="[Mapa da localização da MotorWeb]" class="w-full h-72 object-cover p-8 pt-4">
-                            <!-- Exemplo de Iframe (descomente e ajuste o src):
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.83543450937!2d144.9537353153165!3d-37.81627997975153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d79646a7bd5e!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1603190628709!5m2!1sen!2sau" class="w-full h-72 border-0" allowfullscreen="" loading="lazy"></iframe>
-                            -->
+                        <div>
+                            <img src="https://placehold.co/600x400/e0e0e0/333333?text=Fachada+Histórica+MotorWeb" alt="[Imagem da fachada da MotorWeb ou uma imagem conceitual da empresa]" class="rounded-lg shadow-md w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-3"><i class="fas fa-bullseye mr-2"></i> Nossa Missão</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Proporcionar soluções automotivas completas, desde a aquisição do veículo ideal até a manutenção especializada, superando as expectativas de nossos clientes através de um atendimento personalizado, produtos de qualidade e serviços de excelência, com ética e responsabilidade.
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-semibold text-amber-600 mb-3"><i class="fas fa-eye mr-2"></i> Nossa Visão</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Ser reconhecida como a principal referência em concessionária e centro automotivo da região, destacando-nos pela inovação, confiabilidade e pelo compromisso com a satisfação total de nossos clientes e colaboradores.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 md:p-12 rounded-xl shadow-xl">
+                    <h2 class="text-3xl font-semibold text-center text-amber-600 mb-8">Nossos Valores</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                        <div class="p-4">
+                            <i class="fas fa-handshake text-4xl text-gray-700 mb-3"></i>
+                            <h4 class="text-xl font-medium text-gray-800 mb-1">Confiança</h4>
+                            <p class="text-gray-600 text-sm">Transparência em todas as negociações.</p>
+                        </div>
+                        <div class="p-4">
+                            <i class="fas fa-star text-4xl text-gray-700 mb-3"></i>
+                            <h4 class="text-xl font-medium text-gray-800 mb-1">Qualidade</h4>
+                            <p class="text-gray-600 text-sm">Produtos e serviços de excelência.</p>
+                        </div>
+                        <div class="p-4">
+                            <i class="fas fa-users text-4xl text-gray-700 mb-3"></i>
+                            <h4 class="text-xl font-medium text-gray-800 mb-1">Foco no Cliente</h4>
+                            <p class="text-gray-600 text-sm">Sua satisfação é nossa prioridade.</p>
+                        </div>
+                        <div class="p-4">
+                            <i class="fas fa-cogs text-4xl text-gray-700 mb-3"></i>
+                            <h4 class="text-xl font-medium text-gray-800 mb-1">Inovação</h4>
+                            <p class="text-gray-600 text-sm">Buscando sempre as melhores soluções.</p>
                         </div>
                     </div>
                 </div>
@@ -131,8 +135,8 @@
                     <h3 class="text-lg font-semibold text-white mb-4">Links Rápidos</h3>
                     <ul class="space-y-2 text-sm">
                         <li><a href="/" class="hover:text-amber-400 transition-colors">Home</a></li>
-                        <li><a href="/veiculos" class="hover:text-amber-400 transition-colors">Veículos</a></li>
-                        <li><a href="/servicos" class="hover:text-amber-400 transition-colors">Serviços</a></li>
+                        <li><a href="/veiculo" class="hover:text-amber-400 transition-colors">Veículos</a></li>
+                        <li><a href="/servico" class="hover:text-amber-400 transition-colors">Serviços</a></li>
                         <li><a href="/sobre" class="hover:text-amber-400 transition-colors">Sobre Nós</a></li>
                         <li><a href="/contato" class="hover:text-amber-400 transition-colors">Contato</a></li>
                     </ul>
